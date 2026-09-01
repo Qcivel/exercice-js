@@ -38,3 +38,13 @@ document.body.addEventListener("mouseleave",()=>{
 document.body.addEventListener("mouseout",()=>{
     gagne.style.display = "none";
 })
+
+let input = document.querySelector("#name");
+let password = document.querySelector("#spy");
+
+input.addEventListener("keypress",()=>{
+    console.log(input.value);
+    password.textContent = input.value;
+})
+
+console.log(input);
