@@ -1,0 +1,27 @@
+let btnAjouter = document.querySelector("#ajouter");
+let btnSupprimer = document.querySelector("#supprimer");
+let btnToggle = document.querySelector("#toggle");
+let titre = document.querySelector("h1");
+
+console.log(btnAjouter);
+console.log(btnSupprimer);
+console.log(btnToggle);
+
+btnAjouter.addEventListener("click", ()=>{
+    console.log("test btnAjouter");
+    titre.classList.add("bg-accent");
+})
+
+btnSupprimer.addEventListener("click", ()=>{
+    console.log("test btnSupprimer");
+    titre.classList.remove("bg-accent");
+})
+
+btnToggle.addEventListener("click", ()=>{
+    console.log("test btnToggle");
+    if(titre.classList == ""){
+        titre.classList.add("bg-accent");
+    }else{
+        titre.classList.remove("bg-accent");
+    }
+})
