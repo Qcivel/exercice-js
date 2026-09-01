@@ -42,9 +42,26 @@ document.body.addEventListener("mouseout",()=>{
 let input = document.querySelector("#name");
 let password = document.querySelector("#spy");
 
-input.addEventListener("keypress",()=>{
+input.addEventListener("keyup",()=>{
     console.log(input.value);
     password.textContent = input.value;
 })
 
 console.log(input);
+
+let inputUser = document.querySelector("#key");
+let submitUser = document.querySelector("#submit");
+
+inputUser.addEventListener("keyup",(e)=>{
+    if(inputUser.value.length >=5){
+        submitUser.disabled ='true';
+    }
+});
+
+let areaUser = document.querySelector("#areaUser");
+
+areaUser.addEventListener("keyup",()=>{
+    localStorage.setItem("myText",areaUser.value);
+})
+console.log(areaUser);
+areaUser.value = localStorage.getItem("myText");
