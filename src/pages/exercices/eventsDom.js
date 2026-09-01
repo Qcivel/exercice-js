@@ -25,3 +25,16 @@ btnToggle.addEventListener("click", ()=>{
         titre.classList.remove("bg-accent");
     }
 })
+
+let gagne = document.querySelector(".dollars");
+gagne.style.display = "none";
+
+
+
+document.body.addEventListener("mouseleave",()=>{
+    gagne.style.display = "block";
+})
+
+document.body.addEventListener("mouseout",()=>{
+    gagne.style.display = "none";
+})
