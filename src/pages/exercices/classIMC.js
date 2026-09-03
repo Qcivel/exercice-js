@@ -7,11 +7,11 @@ class IMC{
     }
 
     calculIMC(){
-        return this.poids/this.taille**2;
+        return (this.poids/(this.taille**2)).toFixed(2);
     }
 
     display(){
-        console.log(this.nom + "(" + this.poids + this.taille + ")" + "a un IMC de : " + this.calculIMC().toFixed(2))
+        console.log(this.nom + "(" + this.poids + "kg" + ", " + this.taille +"m"+ ")" + "a un IMC de : " + this.calculIMC())
     }
 }
 
@@ -21,7 +21,8 @@ let list = [
     new IMC("JOJO",300, 2),
     new IMC("Gontrand",90, 1.75),
     new IMC("Colonel Clock",200, 1.75),
-    new IMC("Josiane de la Vega",99, 1.55)
+    new IMC("Josiane de la Vega",99, 1.55),
+    new IMC("Josiane de la Vega",95, 1.78),
 ]
 
 list.forEach((e)=>{
